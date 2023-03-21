@@ -18,12 +18,11 @@ from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('accounts/', include('django.contrib.auth.urls')),
+    path('accounts/', include('accounts.urls')),
     path('post/', include('post.urls')),
-    # path('post/', include('post.urls')),
-
-    #include the module in the urls in the post directory, u include it in the urls.py that came naturally after
-    #installing.
-    #url is locating to the path
-
-
 ]
+
+# include the module in the urls in the post directory, u include it in the urls.py that came naturally after
+# installing.
+# url is locating to the path
